@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Final</title>
+    <link rel="stylesheet" href="/home/alexey/Загрузки/Project/Final/css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+   <header>
+
+   </header>
+
+   <div id="particles-js" class="particles">
+     <div id="app">
+   <div class="stats">
+     <h3 class="stats__title">{{"Текущих задач: "+ tasks.length}}</h3>
+   </div>
+   <task @task_done="delete_task(index)" :key="index" v-for="(data,index) in tasks" :data="data" ></task>
+   <div class="add_task">
+     <div class="add_task__input ">
+         <input placeholder="Новая задача..." type="text" v-model="new_task.title">
+         <textarea placeholder="Описание" type="text" v-model="new_task.desc"></textarea>
+     </div>
+     <button class="add_task__btn" @click="add_task">Add Task</button>
+   </div>
+ </div>
+   </div>
+
+    <footer>
+
+
+   </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="/home/alexey/Загрузки/Project/Final/js/particles.js"></script>
+<script src="/home/alexey/Загрузки/Project/Final/js/main.js"></script>
+<script src="/home/alexey/Загрузки/Project/Final/js/jsFORtasks.js"></script>
+  </body>
+</html>
